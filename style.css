@@ -1,29 +1,28 @@
+@media (max-width: 768px) {
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   background-color: #490b0c;
-  scroll-behavior: smooth;
-  cursor: url("./img/cursor2.png") 10 6, auto;
-  /* cursor: url("./img/wine\ glass1.png") 10 6, auto; */
+  cursor: url("./img/cursor2.png"), auto;
 }
-
-a,
-button, 
-.nav-link, 
-.nav-logo-group, 
-#mobileMenuBtn,
-[role="button"] {
-    /* cursor: url("./img/Cursor\ hover.png") 16 16, pointer !important; */
+.uxarkel, a,
+.bookbtn,
+#kochak:hover,
+#restart:hover,
+.nav-link:hover,
+.btn:hover {
     cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
-
 }
 
-/* Color palette */
 :root {
   --wine-red: #8b1e2c;
   --wine-red-dark: #5e121c;
@@ -34,8 +33,6 @@ button,
   --white: #fefaf5;
   --gray-light: #2c2722;
 }
-
-/* Sticky navigation */
 .navbar {
   position: absolute;
   top: 0;
@@ -47,7 +44,6 @@ button,
   border-bottom: 1px solid rgba(201, 165, 59, 0.4);
   padding: 1rem;
 }
-
 .bookbtn{
   display: inline-block;
   background: var(--wine-red-dark);
@@ -60,19 +56,15 @@ button,
   border-radius: 40px;
   transition: 0.3s;
 }
-
 .bookbtn:hover{
   color: var(--wine-red-dark);
   background: var(--gold-light);
   transform: translateY(-4px);
   box-shadow: 0 0 35px #e0bd5c;
 }
-
 .hero {
   position: relative;
 }
-
-
 .asalan{
   display: flex;
   align-items: center;
@@ -86,7 +78,6 @@ button,
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   font-size: 2.5rem;
   font-weight: 500;
@@ -98,14 +89,12 @@ button,
   background-clip: text;
   color: transparent;
 }
-
 .nav-links {
   display: flex;
   gap: 3.5rem;
   list-style: none;
   transition: all 0.3s ease;
 }
-
 .nav-links li a {
   text-decoration: none;
   color: var(--white);
@@ -116,14 +105,12 @@ button,
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
 }
-
 .nav-links li a:hover,
 .nav-links li a.active {
   color: var(--gold);
   border-bottom-color: var(--gold);
 }
-
-.kochak {
+#kochak {
   position: fixed;
   bottom: 17px;
   right: 30px;
@@ -132,16 +119,11 @@ button,
   display: block;
   font-size: 30px;
   background: none;
-  /* border: none; */
+  border: none;
 }
-
-
-/* Sections general */
 section {
   padding: 5rem 2rem;
-
 }
-
 .section-title {
   font-size: 2.5rem;
   font-weight: 500;
@@ -151,7 +133,6 @@ section {
   letter-spacing: 1px;
   position: relative;
 }
-
 .section-title::after {
   content: '';
   display: block;
@@ -161,39 +142,28 @@ section {
   margin: 0.8rem auto 0;
   border-radius: 4px;
 }
-
-/* Hero Fullscreen */
 .hero {
   height: 100vh;
   min-height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url(./img/wine2.jpg) center/cover no-repeat;
+    url(./img/winery.jpg) center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   margin-top: 0;
 }
-
 .hero-content {
   max-width: 800px;
 }
-
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 400;
   color: var(--white);
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
+  line-height: 1.5;
 }
-
-.hero p {
-  font-size: 1.4rem;
-  margin: 1.5rem 0;
-  color: #f5e6d3;
-  font-weight: 300;
-}
-
 .btn {
   display: inline-block;
   background: transparent;
@@ -206,188 +176,97 @@ section {
   border-radius: 40px;
   transition: 0.3s;
 }
-
 .btn-primary {
   background: var(--wine-red-dark);
   color: rgba(255, 255, 255, 0.832);
   border: none;
 }
-
 .btn-primary:hover {
   color: var(--wine-red-dark);
   background: var(--gold-light);
   transform: translateY(-4px);
   box-shadow: 0 0 35px #e0bd5c;
 }
-
 .btn-outline:hover {
   background: var(--gold);
   color: var(--black);
   transform: translateY(-2px);
 }
-
-/* About */
-.about-grid {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-  color: #e2d9cf;
-}
-
-.about-image {
-  flex: 1;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.about-image:hover img {
-  transform: scale(1.03);
-}
-
-/* Wines Cards */
-.wines-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.wine-card {
-  background: var(--black-soft);
-  border-radius: 28px;
-  overflow: hidden;
-  width: 300px;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(201, 165, 59, 0.2);
-}
-
-.wine-card:hover {
-  transform: translateY(-12px);
-  border-color: var(--gold);
-  box-shadow: 0 25px 35px -12px rgba(201, 165, 59, 0.25);
-}
-
-.wine-img {
-  height: 280px;
-  background-size: cover;
-  background-position: center;
-}
-
-.wine-card h3 {
-  font-size: 1.7rem;
-  margin: 1rem 1rem 0.5rem;
-  color: var(--gold);
-}
-
-.wine-card p {
-  margin: 0 1rem 0.5rem;
-  color: #ccc9c4;
-}
-
-.price {
+.price{
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--gold-light);
   margin: 0.5rem 1rem 1.2rem;
 }
-
-/* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.8rem;
+  justify-items: center;
 }
-
-.gallery-item {
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.25s, box-shadow 0.3s;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-  aspect-ratio: 1 / 0.9;
+.gallery-grid div{
+  width: 85%;
 }
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s;
-  display: block;
+.gallery-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3vw;
+  justify-items: center;
 }
-
-.gallery-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 28px -8px black;
+.gallery-cards img{
+  border-radius: 1.5vw;
+  border: 2px solid #0a070500;
+  transition: 0.3s;
 }
-
-.gallery-item:hover img {
-  transform: scale(1.05);
+.gallery-cards img:hover{
+  box-shadow: 0 0 30px var(--gold);
+  border: 1px solid var(--gold);
 }
-
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.92);
-  backdrop-filter: blur(12px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  visibility: hidden;
+.gallery-text{
+  font-size: 1.4rem;
+  color: rgb(201, 201, 201);
+  line-height: 1.8;
+  text-align: center;
+}
+.estate-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+}
+.estate-grid img{
+  width: 22vw;
+}
+.estate-grid p{
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
+  width: 89%;
+  text-align: center;
+  transform: translateY(5vw);
   opacity: 0;
-  transition: 0.25s;
+  margin-top: 1vw;
+  line-height: 1.5;
+  transition: 0.4s;
 }
-
-.lightbox.active {
-  visibility: visible;
-  opacity: 1;
+.estate-card1 img,
+.estate-card2 img,
+.estate-card3 img,
+.estate-card4 img{
+  border-radius: 1.5vw;
+  transition: 0.4s;
 }
-
-.lightbox-img {
-  max-width: 85%;
-  max-height: 85%;
-  border-radius: 24px;
-  border: 3px solid var(--gold);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+.estate-card1 img:hover,
+.estate-card2 img:hover,
+.estate-card3 img:hover,
+.estate-card4 img:hover{
+  transform: scale(1.1);
 }
-
-.close-lightbox {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 3rem;
-  color: var(--gold);
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-weight: bold;
+.estate-card1:hover p,
+.estate-card2:hover p,
+.estate-card3:hover p,
+.estate-card4:hover p{
+  transform: translateY(0);
+  opacity: 100;
 }
-
-/* Contact Form */
 .contact-form {
   max-width: 680px;
   margin: 0 auto;
@@ -396,11 +275,25 @@ section {
   border-radius: 32px;
   border: 1px solid rgba(201, 165, 59, 0.3);
 }
-
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 4vw;
+}
+.about-text{
+  color: rgb(201, 201, 201);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.about-image{
+  width: 100%;
+  border-radius: 2vw;
+}
 .form-group {
   margin-bottom: 1.5rem;
 }
-
 input,
 textarea {
   width: 100%;
@@ -425,7 +318,6 @@ textarea:focus {
   font-size: 0.8rem;
   margin-top: 5px;
 }
-
 button[type="submit"] {
   background: var(--gold);
   border: none;
@@ -438,59 +330,45 @@ button[type="submit"] {
   transition: 0.2s;
   color: var(--black);
 }
-
 button[type="submit"]:hover {
   background: var(--gold-light);
   transform: scale(0.98);
 }
-
-/* Footer */
 footer {
   background: #0c0907;
   border-top: 1px solid rgba(201, 165, 59, 0.3);
   padding: 2rem;
-  text-align: center;
 }
-
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   margin-bottom: 1.2rem;
 }
-
-.social-icons a {
-  color: var(--gold);
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
+.social-icons a img{
   transition: 0.2s;
-  background: #1f1914;
   width: 44px;
   height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
 }
-
 .social-icons a:hover {
-  background: var(--gold);
-  color: black;
   transform: translateY(-4px);
 }
-
 .copyright {
   font-size: 0.85rem;
   color: #a0907e;
 }
-
-/* Responsive */
+.tvyalner{
+  font-size: 0.85rem;
+  color: #a0907e;
+  margin-bottom: 0.5vw;
+}
+.footer-grid{
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+}
 @media (max-width: 860px) {
   .menu-toggle {
     display: block;
   }
-
   .nav-links {
     display: none;
     width: 100%;
@@ -499,32 +377,28 @@ footer {
     text-align: center;
     padding: 1.5rem 0 0.5rem;
   }
-
   .nav-links.active {
     display: flex;
   }
-
   .hero h1 {
     font-size: 2.5rem;
   }
-
   .hero p {
     font-size: 1.1rem;
   }
-
   .section-title {
     font-size: 2rem;
   }
 }
-
-/* scroll reveal animation (simple intersection) */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
 .fade-up.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 480px) {
 }

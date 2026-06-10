@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #490b0c;
+  cursor: url("./img/cursor2.png"), auto;
+}
+.uxarkel, a,
+.bookbtn,
+#kochak:hover,
+#restart:hover,
+.nav-link:hover,
+.btn:hover {
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+
+:root {
+  --wine-red: #8b1e2c;
+  --wine-red-dark: #5e121c;
+  --gold: #e0bd5c;
+  --gold-light: #ffffff;
+  --black: #0a0705;
+  --black-soft: #14100c;
+  --white: #fefaf5;
+  --gray-light: #2c2722;
+}
+body{
+    background:var(--wine-red-dark);
+    font-family:sans-serif;
+}
+.tour-section{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:80px;
+    align-items:center;
+}
+.tour-list{
+    display:grid;
+    gap:20px;
+}
+.tour-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    border:3px solid transparent;
+    transition:.3s;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.tour-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+.tour-card h3{
+    text-align:center;
+    padding:15px;
+    background:var(--wine-red);
+    color:white;
+}
+.tour-card:hover{
+    transform:translateY(-5px);
+}
+.tour-card.active{
+    border-color:var(--gold);
+}
+.tour-preview{
+    background:var(--black-soft);
+    min-height:420px;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    align-items:center;
+}
+.preview-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+.preview-content{
+    padding:40px;
+    text-align:center;
+}
+.preview-content h2{
+    font-size:48px;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+.price{
+    font-size:32px;
+    margin-bottom:25px;
+}
+.preview-content p{
+    line-height:1.8;
+    font-size:18px;
+    color: var(--gold-light);
+    margin-bottom: 25px;
+}
+.preview-content a{
+    padding:12px 30px;
+    border:none;
+    background:var(--gold);
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+}

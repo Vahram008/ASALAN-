@@ -1,0 +1,225 @@
+@media (max-width: 768px) {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #490b0c;
+  padding: 4vh 4vw;
+  cursor: url("./img/cursor2.png"), auto;
+}
+.uxarkel, a,
+.bookbtn,
+#kochak:hover,
+#restart:hover,
+.nav-link:hover,
+.btn:hover {
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+
+:root {
+  --wine-red: #8b1e2c;
+  --wine-red-dark: #5e121c;
+  --gold: #e0bd5c;
+  --gold-light: #ffffff;
+  --black: #0a0705;
+  --black-soft: #14100c;
+  --white: #fefaf5;
+  --gray-light: #2c2722;
+}
+.wine-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 2vw;
+}
+.wines{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 20px;
+}
+.wine1{
+    background-image: url(img/wine1.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.wine2{
+    background-image: url(img/wine2.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.wine3{
+    background-image: url(img/wine3.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.wine4{
+    background-image: url(img/wine4.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.wine5{
+    background-image: url(img/wine5.png);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.box1{
+    background-image: url(img/box1.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.box2{
+    background-image: url(img/box2.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.box3{
+    background-image: url(img/box3.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.box4{
+    background-image: url(img/box4.jpg);
+    background-size: cover;
+    height: 21.5vw;
+    width: 21.5vw;
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 1vw;
+    display: flex;
+    flex-direction:column;
+    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+}
+.wine-grid h1{
+    color: var(--gold);
+    font-size: 3vw;
+    text-align: center;
+}
+.wine-grid h2{
+    font-size: 2vw;
+    color: var(--gold);
+    margin-bottom: 1vw;
+    text-align: center;
+}
+.wine-grid p{
+    font-size: 1vw;
+    color: var(--gold);
+    font-weight: 600;
+    
+}
+.wine1 div,
+.wine2 div,
+.wine3 div,
+.wine4 div,
+.wine5 div,
+.box1 div,
+.box2 div,
+.box3 div,
+.box4 div{
+    opacity: 0;
+    transform: translateY(7vw);
+    transition: 0.4s;
+}
+.wine1:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.wine2:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.wine3:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.wine4:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.wine5:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.box1:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.box2:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.box3:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+.box4:hover div{
+    opacity: 100;
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+}
