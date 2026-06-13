@@ -1,6 +1,3 @@
-@media (max-width: 768px) {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -146,7 +143,7 @@ section {
   height: 100vh;
   min-height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url(./img/winery.jpg) center/cover no-repeat;
+    url(./img/winery2.jpg) center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
