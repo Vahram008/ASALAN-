@@ -1,63 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asalan Wine</title>
-    <link rel="stylesheet" href="./book.css">
-    <link rel="icon" href="./img/Icon 4-01.png">
-</head>
-<body>
-    <a  style="position: fixed; top: 1.5vw; left: 1.5vw; background: var(--gold);width: 2.5vw; height: 2.5vw;display: flex;justify-content: center;align-items: center;border-radius: 0.2vw;color: var(--wine-red-dark);text-decoration: none;" href="./index.html">❮</a>
+    <link rel="stylesheet" href="./book.css" />
+    <link rel="icon" href="./img/Icon 4-01.png" />
+  </head>
+  <body>
+    <a class="back-btn" href="./index.html">❮</a>
+    <button class="lang-switch"><span>EN</span></button>
     <div class="tour-section">
-        <div class="tour-list">
-            <div class="tour-card active"
-                data-title="Ստանդարտ"
-                data-price="10000 Դրամ"
-                data-img="./img/wine1.jpg"
-                data-text="Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես">
-                <img src="./img/wine1.jpg" alt="">
-                <h3>Ստանդարտ</h3>
-            </div>
-            <div class="tour-card"
-                data-title="Դասական"
-                data-price="15000 Դրամ"
-                data-img="./img/wine2.jpg"
-                data-text="Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես և պանրի տեսականի ">
-                <img src="./img/wine2.jpg" alt="">
-                <h3>Դասական</h3>
-            </div>
-            <div class="tour-card"
-                data-title="Հատուկ"
-                data-price="20000 Դրամ"
-                data-img="./img/wine3.jpg"
-                data-text="Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես, պանրի, մսի, չրերի տեսականի և չորահաց">
-                <img src="./img/wine3.jpg" alt="">
-                <h3>Հատուկ</h3>
-            </div>
-            <div class="tour-card"
-                data-title="Պրեմիում"
-                data-price="25000 Դրամ"
-                data-img="./img/wine4.jpg"
-                data-text="Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես, պանրի, մսի, չրերի տեսականի, չորահաց, ճաշ կամ ընթրիք">
-                <img src="./img/wine4.jpg" alt="">
-                <h3>Պրեմիում</h3>
-            </div>
+      <div class="tour-list">
+        <div
+          class="tour-card active"
+          data-key="standard"
+          data-img="./img/wine1.jpg">
+          <img src="./img/wine1.jpg" alt="" />
+          <h3 data-i18n="tour-standard-title">Ստանդարտ</h3>
         </div>
-        <div class="tour-preview">
-            <div class="preview-image">
-                <img id="previewImg" src="./img/wine1.jpg" alt="">
-            </div>
-            <div class="preview-content">
-                <h2 id="previewTitle">Ստանդարտ</h2>
-                <p class="price" id="previewPrice"> Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես</p>
-                <p id="previewText">
-                    
-                </p>
-                <a href="./index.html#contact">Ամրագրել</a>
-            </div>
+        <div class="tour-card" data-key="classic" data-img="./img/wine2.jpg">
+          <img src="./img/wine2.jpg" alt="" />
+          <h3 data-i18n="tour-classic-title">Դասական</h3>
         </div>
+        <div class="tour-card" data-key="special" data-img="./img/wine3.jpg">
+          <img src="./img/wine3.jpg" alt="" />
+          <h3 data-i18n="tour-special-title">Հատուկ</h3>
+        </div>
+        <div class="tour-card" data-key="premium" data-img="./img/wine4.jpg">
+          <img src="./img/wine4.jpg" alt="" />
+          <h3 data-i18n="tour-premium-title">Պրեմիում</h3>
+        </div>
+      </div>
+      <div class="tour-preview">
+        <div class="preview-image">
+          <img id="previewImg" src="./img/wine1.jpg" alt="" />
+        </div>
+        <div class="preview-content">
+          <h2 id="previewTitle" data-i18n="tour-standard-title">Ստանդարտ</h2>
+          <p class="price" id="previewPrice" data-i18n="tour-standard-price">
+            10.000 Դրամ
+          </p>
+          <p id="previewText" data-i18n="tour-standard-text">
+            Էքսկուրսիա գործարանում, զբոսանք այգիներում, գինու համտես
+          </p>
+          <a href="./index.html#contact" data-i18n="tour-book-btn">Ամրագրել</a>
+        </div>
+      </div>
     </div>
+    <script src="lang.js"></script>
     <script src="./book.js"></script>
-</body>
+  </body>
 </html>

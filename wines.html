@@ -8,79 +8,81 @@
     <link rel="icon" href="./img/Icon 4-01.png">
 </head>
 <body>
-    <a  style="position: fixed; top: 1.5vw; left: 1.5vw; background: var(--gold);width: 2.5vw; height: 2.5vw;display: flex;justify-content: center;align-items: center;border-radius: 0.2vw;color: var(--wine-red-dark);text-decoration: none;" href="./index.html">❮</a>
+    <a class="back-btn" href="./index.html">❮</a>
+    <button class="lang-switch"><span>EN</span></button>
     <div class="wine-grid">
-        <h1>Տեսականի</h1>
+        <h1 data-i18n="wines-title">Տեսականի</h1>
         <div class="wines">
             <div class="wine1">
                 <div>
-                    <h2>Շունչ</h2>
-                    <p>Կարմիր Կիսաքաղցր</p>
-                    <p>10000 Դրամ</p>
+                    <h2 data-i18n="wine1-name">Շունչ</h2>
+                    <p data-i18n="wine1-type">Կարմիր Կիսաքաղցր</p>
+                    <p data-i18n="wine1-price">10000 Դրամ</p>
                 </div>
             </div>
             <div class="wine2">
                 <div>
-                    <h2>Մառան</h2>
-                    <p>Սպիտակ Կիսաչոր</p>
-                    <p>12000 Դրամ</p>
+                    <h2 data-i18n="wine2-name">Մառան</h2>
+                    <p data-i18n="wine2-type">Սպիտակ Կիսաչոր</p>
+                    <p data-i18n="wine2-price">12000 Դրամ</p>
                 </div>
             </div>
             <div class="wine3">
                 <div>
-                    <h2>Մառան</h2>
-                    <p>Վարդագույն Չոր</p>
-                    <p>14000 Դրամ</p>
+                    <h2 data-i18n="wine3-name">Մառան</h2>
+                    <p data-i18n="wine3-type">Վարդագույն Չոր</p>
+                    <p data-i18n="wine3-price">14000 Դրամ</p>
                 </div>
             </div>
             <div class="wine4">
                 <div>
-                    <h2>Տակառ</h2>
-                    <p>Կարմիր Քաղցր</p>
-                    <p>16000 Դրամ</p>
+                    <h2 data-i18n="wine4-name">Տակառ</h2>
+                    <p data-i18n="wine4-type">Կարմիր Քաղցր</p>
+                    <p data-i18n="wine4-price">16000 Դրամ</p>
                 </div>
             </div>
             <div class="wine5">
                 <div>
-                    <h2>Արտաշատ</h2>
-                    <p>Չոր Հնեցված</p>
-                    <p>18000 Դրամ</p>
+                    <h2 data-i18n="wine5-name">Արտաշատ</h2>
+                    <p data-i18n="wine5-type">Չոր Հնեցված</p>
+                    <p data-i18n="wine5-price">18000 Դրամ</p>
                 </div>
             </div>
         </div>
         
-        <h1>Հավաքածուներ</h1>
+        <h1 data-i18n="collections-title">Հավաքածուներ</h1>
         <div class="boxes">
             <div class="box1">
                 <div>
-                    <h2>Արտաշատ</h2>
-                    <p>Չոր Հնեցված</p>
-                    <p>25000 Դրամ</p>
+                    <h2 data-i18n="box1-name">Արտաշատ</h2>
+                    <p data-i18n="box1-type">Չոր Հնեցված</p>
+                    <p data-i18n="box1-price">25000 Դրամ</p>
                 </div>
             </div>
             <div class="box2">
                 <div>
-                    <h2>Մառան</h2>
-                    <p>Վարդագույն Չոր</p>
-                    <p>25000 Դրամ</p>
+                    <h2 data-i18n="box2-name">Մառան</h2>
+                    <p data-i18n="box2-type">Վարդագույն Չոր</p>
+                    <p data-i18n="box2-price">25000 Դրամ</p>
                 </div>
             </div>
             <div class="box3">
                 <div>
-                    <h2>Մառան</h2>
-                   <p>Սպիտակ Կիսաչոր</p>
-                    <p>25000 Դրամ</p>
+                    <h2 data-i18n="box3-name">Մառան</h2>
+                   <p data-i18n="box3-type">Սպիտակ Կիսաչոր</p>
+                    <p data-i18n="box3-price">25000 Դրամ</p>
                 </div>
             </div>
             <div class="box4">
                 <div>
-                    <h2>Տակառ</h2>
-                    <p>Կարմիր Քաղցր</p>
-                    <p>25000 Դրամ</p>
+                    <h2 data-i18n="box4-name">Տակառ</h2>
+                    <p data-i18n="box4-type">Կարմիր Քաղցր</p>
+                    <p data-i18n="box4-price">25000 Դրամ</p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="lang.js"></script>
     <script src="wines.js"></script>
 </body>
 </html>

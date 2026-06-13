@@ -1,23 +1,42 @@
+@media (max-width: 768px) {
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    sans-serif;
   background-color: #490b0c;
   cursor: url("./img/cursor2.png"), auto;
 }
-.uxarkel, a,
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+.uxarkel,
+a,
 .bookbtn,
 #kochak:hover,
 #restart:hover,
 .nav-link:hover,
+.lang-switch:hover,
+.menu-toggle:hover,
 .btn:hover {
-    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+  cursor:
+    url("./img/wine\ glass2.png") 16 16,
+    pointer !important;
 }
 
 :root {
@@ -31,7 +50,7 @@ body {
   --gray-light: #2c2722;
 }
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,7 +60,8 @@ body {
   border-bottom: 1px solid rgba(201, 165, 59, 0.4);
   padding: 1rem;
 }
-.bookbtn{
+.bookbtn {
+  text-align: center;
   display: inline-block;
   background: var(--wine-red-dark);
   border: none;
@@ -52,8 +72,9 @@ body {
   text-decoration: none;
   border-radius: 40px;
   transition: 0.3s;
+  margin-left: 20px;
 }
-.bookbtn:hover{
+.bookbtn:hover {
   color: var(--wine-red-dark);
   background: var(--gold-light);
   transform: translateY(-4px);
@@ -62,7 +83,7 @@ body {
 .hero {
   position: relative;
 }
-.asalan{
+.asalan {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -97,6 +118,7 @@ body {
   color: var(--white);
   font-weight: 640;
   font-size: 20px;
+  white-space: nowrap;
   transition: 0.2s;
   letter-spacing: 0.5px;
   padding-bottom: 6px;
@@ -106,6 +128,62 @@ body {
 .nav-links li a.active {
   color: var(--gold);
   border-bottom-color: var(--gold);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-book-item {
+  display: none;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.lang-switch:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-3px);
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid rgba(224, 189, 92, 0.4);
+  border-radius: 10px;
+  padding: 8px;
+}
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 #kochak {
   position: fixed;
@@ -131,7 +209,7 @@ section {
   position: relative;
 }
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 70px;
   height: 3px;
@@ -142,7 +220,8 @@ section {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
     url(./img/winery2.jpg) center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -189,7 +268,7 @@ section {
   color: var(--black);
   transform: translateY(-2px);
 }
-.price{
+.price {
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--gold-light);
@@ -201,39 +280,38 @@ section {
   gap: 1.8rem;
   justify-items: center;
 }
-.gallery-grid div{
+.gallery-grid div {
   width: 85%;
 }
-.gallery-cards{
+.gallery-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3vw;
   justify-items: center;
 }
-.gallery-cards img{
+.gallery-cards img {
   border-radius: 1.5vw;
   border: 2px solid #0a070500;
   transition: 0.3s;
 }
-.gallery-cards img:hover{
+.gallery-cards img:hover {
   box-shadow: 0 0 30px var(--gold);
   border: 1px solid var(--gold);
 }
-.gallery-text{
+.gallery-text {
   font-size: 1.4rem;
   color: rgb(201, 201, 201);
   line-height: 1.8;
   text-align: center;
 }
-.estate-grid{
+.estate-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  
 }
-.estate-grid img{
+.estate-grid img {
   width: 22vw;
 }
-.estate-grid p{
+.estate-grid p {
   font-size: 1rem;
   color: rgb(201, 201, 201);
   width: 89%;
@@ -244,25 +322,35 @@ section {
   line-height: 1.5;
   transition: 0.4s;
 }
+
+.estate-card1,
+.estate-card2,
+.estate-card3,
+.estate-card4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .estate-card1 img,
 .estate-card2 img,
 .estate-card3 img,
-.estate-card4 img{
+.estate-card4 img {
   border-radius: 1.5vw;
   transition: 0.4s;
 }
 .estate-card1 img:hover,
 .estate-card2 img:hover,
 .estate-card3 img:hover,
-.estate-card4 img:hover{
+.estate-card4 img:hover {
   transform: scale(1.1);
 }
 .estate-card1:hover p,
 .estate-card2:hover p,
 .estate-card3:hover p,
-.estate-card4:hover p{
+.estate-card4:hover p {
   transform: translateY(0);
-  opacity: 100;
+  opacity: 1;
 }
 .contact-form {
   max-width: 680px;
@@ -272,19 +360,19 @@ section {
   border-radius: 32px;
   border: 1px solid rgba(201, 165, 59, 0.3);
 }
-.about-grid{
+.about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 4vw;
 }
-.about-text{
+.about-text {
   color: rgb(201, 201, 201);
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: justify;
 }
-.about-image{
+.about-image {
   width: 100%;
   border-radius: 2vw;
 }
@@ -341,7 +429,7 @@ footer {
   gap: 2rem;
   margin-bottom: 1.2rem;
 }
-.social-icons a img{
+.social-icons a img {
   transition: 0.2s;
   width: 44px;
   height: 44px;
@@ -353,29 +441,87 @@ footer {
   font-size: 0.85rem;
   color: #a0907e;
 }
-.tvyalner{
+.tvyalner {
   font-size: 0.85rem;
   color: #a0907e;
   margin-bottom: 0.5vw;
 }
-.footer-grid{
+.footer-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
 }
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
+  .estate-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .estate-grid img {
+    width: 100%;
+  }
+  .estate-grid p {
+    margin-top: 30px;
+    transform: translateY(0);
+    opacity: 0;
+    position: static;
+  }
+}
+@media (max-width: 1300px) {
+  .nav-links {
+    gap: 1.6rem;
+  }
+  .nav-links li a {
+    font-size: 17px;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .bookbtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1100px) {
   .menu-toggle {
-    display: block;
+    display: flex;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    position: relative;
   }
   .nav-links {
     display: none;
+    border-radius: 7px;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
-    padding: 1.5rem 0 0.5rem;
+    padding: 1.5rem 0 1.5rem;
+    background: rgba(20, 10, 10, 0.93);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201, 165, 59, 0.4);
+  }
+  .nav-links li a {
+    font-size: 20px;
   }
   .nav-links.active {
     display: flex;
+  }
+  .nav-actions .bookbtn {
+    display: none;
+  }
+  .nav-book-item {
+    display: list-item;
+    margin-top: 0.5rem;
+  }
+  .logo {
+    font-size: 1.8rem;
+  }
+  .bookbtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
   }
   .hero h1 {
     font-size: 2.5rem;
@@ -386,16 +532,172 @@ footer {
   .section-title {
     font-size: 2rem;
   }
+  section {
+    padding: 3.5rem 1.2rem;
+  }
+  .gallery-cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  .gallery-grid div {
+    width: 100%;
+  }
+  .gallery-cards img {
+    width: 100%;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-image {
+    order: -1;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
 }
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 .fade-up.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
+@media (max-width: 700px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+  .asalan img {
+    width: 90px;
+  }
+  .logo {
+    font-size: 1.6rem;
+  }
+  .nav-actions {
+    gap: 0.6rem;
+  }
+  .bookbtn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  .lang-switch {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+  .menu-toggle {
+    width: 34px;
+    height: 34px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  .gallery-text {
+    font-size: 1.05rem;
+  }
+  .about-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
 @media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .asalan img {
+    width: 55px;
+  }
+  .nav-container {
+    padding: 0 0.3rem;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
+  .bookbtn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .lang-switch {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .menu-toggle {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+  }
+  .btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.9rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .gallery-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .gallery-grid div {
+    width: 100%;
+  }
+  .estate-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  #kochak {
+    width: 55px;
+    height: 55px;
+    bottom: 10px;
+    right: 12px;
+  }
+  #kochak img {
+    width: 50px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    font-size: 0.9rem;
+  }
+  .asalan img {
+    width: 48px;
+  }
+  .bookbtn {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.7rem;
+  }
+  .lang-switch {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.7rem;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  .section-title {
+    font-size: 1.35rem;
+  }
 }

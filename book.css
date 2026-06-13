@@ -1,24 +1,39 @@
 @media (max-width: 768px) {
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    sans-serif;
   background-color: #490b0c;
   cursor: url("./img/cursor2.png"), auto;
 }
-.uxarkel, a,
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+.uxarkel,
+a,
 .bookbtn,
 #kochak:hover,
 #restart:hover,
 .nav-link:hover,
+.lang-switch:hover,
 .btn:hover {
-    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+  cursor:
+    url("./img/wine\ glass2.png") 16 16,
+    pointer !important;
 }
 
 :root {
@@ -31,89 +46,237 @@ body {
   --white: #fefaf5;
   --gray-light: #2c2722;
 }
-body{
-    background:var(--wine-red-dark);
-    font-family:sans-serif;
+body {
+  background: var(--wine-red-dark);
+  font-family: sans-serif;
 }
-.tour-section{
-    width:90%;
-    margin:60px auto;
-    display:grid;
-    grid-template-columns:350px 1fr;
-    gap:80px;
-    align-items:center;
+.back-btn {
+  position: fixed;
+  top: 1.5vw;
+  left: 1.5vw;
+  background: var(--gold);
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4vw;
+  color: var(--wine-red-dark);
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 10;
 }
-.tour-list{
-    display:grid;
-    gap:20px;
+.lang-switch {
+  position: fixed;
+  top: 1.5vw;
+  right: 1.5vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  transition: 0.3s;
+  z-index: 10;
 }
-.tour-card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    cursor:pointer;
-    border:3px solid transparent;
-    transition:.3s;
-    cursor: url("./img/wine\ glass2.png") 16 16, pointer !important;
+.lang-switch:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-3px);
 }
-.tour-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
+.tour-section {
+  padding: 20px 15px;
+  width: 90%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 80px;
+  align-items: center;
 }
-.tour-card h3{
-    text-align:center;
-    padding:15px;
-    background:var(--wine-red);
-    color:white;
+.tour-list {
+  display: grid;
+  gap: 20px;
 }
-.tour-card:hover{
-    transform:translateY(-5px);
+.tour-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  cursor:
+    url("./img/wine\ glass2.png") 16 16,
+    pointer !important;
 }
-.tour-card.active{
-    border-color:var(--gold);
+.tour-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
-.tour-preview{
-    background:var(--black-soft);
-    min-height:420px;
-    display:grid;
-    grid-template-columns:350px 1fr;
-    align-items:center;
+.tour-card h3 {
+  text-align: center;
+  padding: 15px;
+  background: var(--wine-red);
+  color: white;
 }
-.preview-image img{
-    width:100%;
-    height:420px;
-    object-fit:cover;
+.tour-card:hover {
+  transform: translateY(-5px);
 }
-.preview-content{
-    padding:40px;
-    text-align:center;
+.tour-card.active {
+  border-color: var(--gold);
 }
-.preview-content h2{
-    font-size:48px;
-    color:var(--gold);
-    margin-bottom:15px;
+.tour-preview {
+  background: var(--black-soft);
+  min-height: 420px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
 }
-.price{
-    font-size:32px;
-    margin-bottom:25px;
+.preview-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
 }
-.preview-content p{
-    line-height:1.8;
-    font-size:18px;
-    color: var(--gold-light);
-    margin-bottom: 25px;
+.preview-content {
+  padding: 40px;
+  text-align: center;
 }
-.preview-content a{
-    padding:12px 30px;
-    border:none;
-    background:var(--gold);
-    color:white;
-    cursor:pointer;
-    font-size:18px;
-    text-decoration: none;
+.preview-content h2 {
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+.price {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--gold);
+  font-weight: bold;
+}
+.preview-content a {
+  padding: 12px 30px;
+  border: none;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+.preview-content a:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(224, 189, 92, 0.4);
+}
+
+.preview-content p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: var(--gold-light);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1250px) {
+  .tour-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1100px) {
+  .tour-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 90px auto 40px;
+    width: 92%;
+  }
+  .tour-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tour-card img {
+    height: 160px;
+  }
+  .tour-preview {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .preview-image img {
+    height: 260px;
+  }
+  .preview-content {
+    padding: 25px;
+  }
+  .preview-content h2 {
+    font-size: 36px;
+  }
+  .price {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 480px) {
+  .tour-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .tour-card img {
+    height: 120px;
+  }
+  .tour-card h3 {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .preview-image img {
+    height: 200px;
+  }
+  .preview-content h2 {
+    font-size: 28px;
+  }
+  .price {
+    font-size: 18px;
+  }
+  .preview-content p {
+    font-size: 15px;
+  }
+  .back-btn,
+  .lang-switch {
+    top: 3vw;
+  }
+  .lang-switch {
+    font-size: 3.2vw;
+    padding: 1.5vw 3vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .tour-section {
+    margin: 80px auto 30px;
+  }
+  .tour-card h3 {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .tour-card img {
+    height: 100px;
+  }
+  .preview-content h2 {
+    font-size: 22px;
+  }
+  .price {
+    font-size: 16px;
+  }
+  .preview-content p {
+    font-size: 13px;
+  }
+  .preview-content a {
+    padding: 10px 22px;
+    font-size: 15px;
+  }
 }
