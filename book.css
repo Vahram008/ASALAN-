@@ -198,7 +198,7 @@ body {
   font-size: 18px;
   color: var(--gold-light);
   margin-bottom: 25px;
-  padding-left: 5px; /* Միայն ձախից հեռավորություն, նկարին չի դիպչի */
+  padding-left: 5px; 
   padding-right: 5px;
 }
 @media (max-width: 1250px) {
@@ -221,21 +221,21 @@ body {
     height: 160px;
   }
   .tour-preview {
-    flex-direction: column !important; /* Ստիպում ենք նկարին և տեքստին դասավորվել իրար տակ */
-    height: auto !important;          /* Թույլ ենք տալիս բլոկին ինքնաբերաբար ձգվել */
-   padding-bottom: 20px;               /* Սահմանում ենք նվազագույն բարձրություն */
+    flex-direction: column !important; 
+    height: auto !important;         
+   padding-bottom: 20px;               
   }
   .preview-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Նկարը միշտ կպահի իր կենտրոնական մասը */
+    object-position: center; 
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
   }
   .preview-image {
-    flex: 0 0 200px !important;       /* Նկարի բարձրությունը հեռախոսով */
-    width: 100% !important;           /* Լայնությունը լրիվ */
+    flex: 0 0 1% !important;      
+    width: 100% !important;          
   }
   .preview-content {
     padding: 15px;
