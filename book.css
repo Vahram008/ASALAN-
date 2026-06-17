@@ -146,20 +146,23 @@ body {
 }
 .tour-preview {
   background: var(--black-soft);
-  min-height: 420px;
   display: flex;
   grid-template-columns: 350px 1fr;
   align-items: center;
   border-radius: 30px;
   overflow: hidden;
 }
+.preview-image {
+  flex: 0 0 40%; 
+  height: 390px; 
+  overflow: hidden;
+  object-position: center;
+}
 .preview-image img {
   width: 100%;
-  height: 420px;
-  object-fit: cover;
+  height: 100%;
 }
 .preview-content {
-  padding: 40px;
   text-align: center;
 }
 .preview-content h2 {
@@ -168,7 +171,6 @@ body {
   margin-bottom: 15px;
 }
 .price {
-  font-size: 32px;
   margin-bottom: 25px;
   color: var(--gold);
   font-weight: bold;
@@ -196,6 +198,8 @@ body {
   font-size: 18px;
   color: var(--gold-light);
   margin-bottom: 25px;
+  padding-left: 5px; /* Միայն ձախից հեռավորություն, նկարին չի դիպչի */
+  padding-right: 5px;
 }
 @media (max-width: 1250px) {
   .tour-section {
@@ -217,14 +221,27 @@ body {
     height: 160px;
   }
   .tour-preview {
-    grid-template-columns: 1fr;
-    min-height: auto;
+    flex-direction: column !important; /* Ստիպում ենք նկարին և տեքստին դասավորվել իրար տակ */
+    height: auto !important;          /* Թույլ ենք տալիս բլոկին ինքնաբերաբար ձգվել */
+    min-height: 400px !important;;                /* Սահմանում ենք նվազագույն բարձրություն */
   }
   .preview-image img {
-    height: 260px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center; /* Նկարը միշտ կպահի իր կենտրոնական մասը */
+  }
+  .preview-image {
+    flex: 0 0 1% !important;       /* Նկարի բարձրությունը հեռախոսով */
+    width: 100% !important;           /* Լայնությունը լրիվ */
+    display: flex;             /* Կենտրոնացման համար */
+    justify-content: center;   /* Հորիզոնական կենտրոնացում */
+    align-items: center;
+    overflow: hidden;
   }
   .preview-content {
-    padding: 25px;
+    padding: 15px;
+    text-align: center;
   }
   .preview-content h2 {
     font-size: 36px;
