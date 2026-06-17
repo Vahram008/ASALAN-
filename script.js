@@ -40,6 +40,18 @@
     });
   }
 
+window.addEventListener('scroll', function() {
+    // Գտնում ենք կոճակը ըստ իր ID-ի (#kochak)
+    const topButton = document.getElementById('kochak'); 
+    
+    // Եթե էջը ներքև է սքրոլ արվել ավելի քան 400 պիքսել
+    if (window.scrollY > 600) {
+        topButton.classList.add('show');    /* Ավելացնում է show դասը (կոճակը հայտնվում է) */
+    } else {
+        topButton.classList.remove('show'); /* Հեռացնում է show դասը (կոճակը թաքնվում է) */
+    }
+});
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href").substring(1);

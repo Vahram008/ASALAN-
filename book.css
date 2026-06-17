@@ -52,6 +52,7 @@ body {
 }
 .back-btn {
   position: fixed;
+  display: inline-flex;
   top: 1.5vw;
   left: 1.5vw;
   background: var(--gold);
@@ -62,11 +63,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.4vw;
+  border-radius: 40px;
   color: var(--wine-red-dark);
   text-decoration: none;
   font-weight: 700;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+.back-btn:hover {
+ background: var(--gold-light);
+ transform: translateY(-3px);
+ box-shadow: 0 0 35px #e0bd5c;
 }
 .lang-switch {
   position: fixed;
@@ -75,21 +82,25 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: 2px solid var(--gold);
-  color: var(--gold);
   font-weight: 700;
-  font-size: 0.9rem;
   letter-spacing: 1px;
-  padding: 0.5rem 1rem;
   border-radius: 40px;
   transition: 0.3s;
   z-index: 10;
+  text-align: center;
+  background: var(--gold);
+  border: none;
+  color: rgba(1, 1, 1, 0.832);
+  text-decoration: none;
+  margin-left: 20px;
+  max-width: 200px;     
+  padding: 10px 15px;    
+  font-size: 0.9rem;     
 }
 .lang-switch:hover {
-  background: var(--gold);
-  color: var(--black);
-  transform: translateY(-3px);
+ background: var(--gold-light);
+ transform: translateY(-3px);
+ box-shadow: 0 0 35px #e0bd5c;
 }
 .tour-section {
   padding: 20px 15px;
@@ -136,9 +147,11 @@ body {
 .tour-preview {
   background: var(--black-soft);
   min-height: 420px;
-  display: grid;
+  display: flex;
   grid-template-columns: 350px 1fr;
   align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
 }
 .preview-image img {
   width: 100%;
@@ -184,12 +197,12 @@ body {
   color: var(--gold-light);
   margin-bottom: 25px;
 }
-
 @media (max-width: 1250px) {
   .tour-section {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-width: 1100px) {
   .tour-section {
     grid-template-columns: 1fr;
@@ -226,15 +239,24 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
+  
   .tour-card img {
-    height: 120px;
+    width: 100% !important;
+    height: auto !important; 
+    object-fit: cover !important;  
+    background: none !important;
+    padding: 0 !important;
   }
+
+  .preview-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+  
   .tour-card h3 {
     padding: 10px;
-    font-size: 0.9rem;
-  }
-  .preview-image img {
-    height: 200px;
+    font-size: 0.85rem;
   }
   .preview-content h2 {
     font-size: 28px;
@@ -260,23 +282,7 @@ body {
     margin: 80px auto 30px;
   }
   .tour-card h3 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 8px;
-  }
-  .tour-card img {
-    height: 100px;
-  }
-  .preview-content h2 {
-    font-size: 22px;
-  }
-  .price {
-    font-size: 16px;
-  }
-  .preview-content p {
-    font-size: 13px;
-  }
-  .preview-content a {
-    padding: 10px 22px;
-    font-size: 15px;
   }
 }
