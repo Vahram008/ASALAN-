@@ -124,7 +124,7 @@ const translations = {
       "© 2025 Asalan Wine — Crafted with heritage & passion. All rights reserved.",
     "wines-title": "Wines",
     "collections-title": "Collections",
-    "wine1-name": "Shoonch",
+    "wine1-name": "Shunch",
     "wine1-type": "Red Semi-sweet",
     "wine1-price": "10,000 AMD",
     "wine2-name": "Maran",
