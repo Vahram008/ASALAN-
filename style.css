@@ -679,11 +679,8 @@ footer {
     gap: 0.5rem;
   }
   .nav-links {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 0;
+    padding: 1rem;
   }
   .bookbtn {
     display: block;
