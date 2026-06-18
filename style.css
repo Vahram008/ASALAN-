@@ -678,11 +678,24 @@ footer {
   .nav-actions {
     gap: 0.5rem;
   }
-  .bookbtn {
-    font-size: 0.8rem;
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
   }
-  .bookbtn:hover {
-   color: var(--wine-red-dark);
+  .bookbtn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .bookbtn:hover{
+   color: #e0bd5c
+   background-color #5e121c;
   }
   .lang-switch {
     padding: 0.4rem 0.8rem;
