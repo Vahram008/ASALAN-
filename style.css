@@ -512,6 +512,10 @@ footer {
 @media (max-width: 1300px) {
   .nav-links {
     gap: 1.6rem;
+    display: flex;
+    flex-direction: column; /* Տարրերը դասավորում ենք իրար տակ */
+    align-items: center;    /* Հորիզոնական կենտրոնացում */
+    width: 100%;
   }
   .nav-links li a {
     font-size: 17px;
@@ -522,6 +526,11 @@ footer {
   .bookbtn {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+    display: inline-block;
+    margin: 10px auto;    
+    text-align: center;
+    width: auto;            /* Թողնում ենք ինքնուրույն որոշի լայնությունը */
+    min-width: 150px;
   }
 }
 @media (max-width: 1100px) {
@@ -672,6 +681,9 @@ footer {
   .bookbtn {
     padding: 0.5rem 0.8rem;
     font-size: 0.8rem;
+  }
+  .bookbtn:hover {
+   color: var(--wine-red-dark);
   }
   .lang-switch {
     padding: 0.4rem 0.8rem;

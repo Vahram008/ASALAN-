@@ -41,14 +41,11 @@
   }
 
 window.addEventListener('scroll', function() {
-    // Գտնում ենք կոճակը ըստ իր ID-ի (#kochak)
     const topButton = document.getElementById('kochak'); 
-    
-    // Եթե էջը ներքև է սքրոլ արվել ավելի քան 400 պիքսել
     if (window.scrollY > 600) {
-        topButton.classList.add('show');    /* Ավելացնում է show դասը (կոճակը հայտնվում է) */
+        topButton.classList.add('show');    
     } else {
-        topButton.classList.remove('show'); /* Հեռացնում է show դասը (կոճակը թաքնվում է) */
+        topButton.classList.remove('show');
     }
 });
 
