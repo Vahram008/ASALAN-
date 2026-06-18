@@ -683,15 +683,21 @@ footer {
     padding: 1rem;
   }
   .bookbtn {
-    display: inline-block;
-    padding: 10px 10px;
-    width: auto;
-    font-size: 0.5rem;
-    text-align: center;
-    margin: 20px auto;
+   text-align: center;
+   display: inline-block;
+   background: var(--wine-red-dark);
+   border: none;
+   color: #5e121c;
+   padding: 10px 10px;
+   width: auto;
+   font-size: 0.5rem;
+   margin: 20px auto;
   }
   .bookbtn:hover{
-   color: #e0bd5c
+  color: var(--wine-red-dark);
+  background: var(--gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px #e0bd5c;
   }
   .lang-switch {
     padding: 0.4rem 0.8rem;
